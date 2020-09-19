@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Usuario/Desktop/Game/Headers/Spaceship.h
+SFML/Graphics.hpp
+-
+
+C:/Users/Usuario/Desktop/Game/main.cpp
+iostream
+-
+SFML/Graphics.hpp
+-
+Headers/Spaceship.h
+C:/Users/Usuario/Desktop/Game/Headers/Spaceship.h
+
