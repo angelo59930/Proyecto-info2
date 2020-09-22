@@ -142,6 +142,33 @@ Game/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/build
 .PHONY : Game/fast
 
+Headers/Enemy_1.obj: Headers/Enemy_1.cpp.obj
+
+.PHONY : Headers/Enemy_1.obj
+
+# target to build an object file
+Headers/Enemy_1.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Headers/Enemy_1.cpp.obj
+.PHONY : Headers/Enemy_1.cpp.obj
+
+Headers/Enemy_1.i: Headers/Enemy_1.cpp.i
+
+.PHONY : Headers/Enemy_1.i
+
+# target to preprocess a source file
+Headers/Enemy_1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Headers/Enemy_1.cpp.i
+.PHONY : Headers/Enemy_1.cpp.i
+
+Headers/Enemy_1.s: Headers/Enemy_1.cpp.s
+
+.PHONY : Headers/Enemy_1.s
+
+# target to generate assembly for a file
+Headers/Enemy_1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Headers/Enemy_1.cpp.s
+.PHONY : Headers/Enemy_1.cpp.s
+
 Headers/Spaceship.obj: Headers/Spaceship.cpp.obj
 
 .PHONY : Headers/Spaceship.obj
@@ -205,6 +232,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Game
+	@echo ... Headers/Enemy_1.obj
+	@echo ... Headers/Enemy_1.i
+	@echo ... Headers/Enemy_1.s
 	@echo ... Headers/Spaceship.obj
 	@echo ... Headers/Spaceship.i
 	@echo ... Headers/Spaceship.s

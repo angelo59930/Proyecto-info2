@@ -3,7 +3,7 @@
 //
 
 #include "Spaceship.h"
-#define WIDTH 540
+#define WIDTH 575
 #define HEIGHT 600
 
 Spaceship::Spaceship(int initial_x, int initial_y, Texture &tex) {

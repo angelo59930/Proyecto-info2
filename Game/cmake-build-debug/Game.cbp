@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Usuario/Desktop/Game/Headers/Enemy_1.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/Usuario/Desktop/Game/Headers/Enemy_1.h">
+			<Option target="Game"/>
+		</Unit>
 		<Unit filename="C:/Users/Usuario/Desktop/Game/Headers/Spaceship.cpp">
 			<Option target="Game"/>
 		</Unit>

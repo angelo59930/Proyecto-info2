@@ -1,13 +1,15 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "Headers/Spaceship.h"
+#include "Headers/Enemy_1.h"
 
 
-
-#define WIDTH 540
+#define WIDTH 575
 #define HEIGHT 600
+#define CANT_ENEMY1_V1 4
 
 using namespace sf;
+
 
 int main() {
     float background_y;
@@ -25,6 +27,7 @@ int main() {
 
     sp_background1.setTexture(tex_background);
     sp_background2.setTexture(tex_background);
+    ///------------SET COLLISION---------------------------------------------------------------------
 
     ///------------SET PLAYER---------------------------------------------------------------------
 
@@ -33,7 +36,7 @@ int main() {
         std::cout << "no se pudo cargar la spaceship" << std::endl;
         return EXIT_FAILURE;
     }
-    Spaceship player((WIDTH/2), (HEIGHT/2), tex_spaceship); //--- tiene que estar en una funcion que lo pongan despues del menu
+    Spaceship player((WIDTH/2), (HEIGHT/2), tex_spaceship);
 
 
     ///-------------SET ENEMY GEN_1----------------------------------------------------------------------------
@@ -42,10 +45,11 @@ int main() {
         std::cout << "no se pudo cargar el enemigo" << std::endl;
         return EXIT_FAILURE;
     }
-
+    auto *enemy1 = new Enemy_1[CANT_ENEMY1_V1];
 
     window.setFramerateLimit(60);
     while(window.isOpen()){
+
         Event event{};
 
         while (window.pollEvent(event)){
@@ -81,14 +85,34 @@ int main() {
         if (Keyboard::isKeyPressed(Keyboard::S)) {
             player.move(0, 5);
         }
+        ///-----------------------ENEMY1---------------------------------------------------------
 
+        if (enemy1->getExistence()){
+            for (int i = 0; i < CANT_ENEMY1_V1; ++i) {
+                enemy1[i].setTexture(tex_enemy_1);
+                enemy1[i].setPosX(64*i);
+            }
+        }
+
+
+        for (int i = 0; i < CANT_ENEMY1_V1; ++i) {
+            enemy1[i].move();
+        }
+
+
+        ///----------------------DRAW--------------------------------------------------------------
         window.clear();
         window.draw(sp_background1);
         window.draw(sp_background2);
         player.draw(window);
-
-
+        for (int i = 0; i < CANT_ENEMY1_V1; ++i) {
+            enemy1[i].draw(window);
+        }
         window.display();
+
     }
+
+    delete [] enemy1;
+
     return EXIT_SUCCESS;
 }

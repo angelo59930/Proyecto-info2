@@ -3,5 +3,5 @@ project(Game)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Game main.cpp Headers/Spaceship.cpp Headers/Spaceship.h)
+add_executable(Game main.cpp Headers/Spaceship.cpp Headers/Spaceship.h Headers/Enemy_1.cpp Headers/Enemy_1.h)
 target_link_libraries(Game sfml-system sfml-window sfml-graphics sfml-audio)

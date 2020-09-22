@@ -1,6 +1,4 @@
-//
-// Created by Usuario on 03/09/2020.
-//
+
 #include <SFML/Graphics.hpp>
 
 using namespace sf;

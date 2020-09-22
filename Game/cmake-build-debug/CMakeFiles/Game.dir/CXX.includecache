@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Usuario/Desktop/Game/Headers/Enemy_1.h
+SFML/Graphics.hpp
+-
+
 C:/Users/Usuario/Desktop/Game/Headers/Spaceship.h
 SFML/Graphics.hpp
 -
@@ -17,4 +21,6 @@ SFML/Graphics.hpp
 -
 Headers/Spaceship.h
 C:/Users/Usuario/Desktop/Game/Headers/Spaceship.h
+Headers/Enemy_1.h
+C:/Users/Usuario/Desktop/Game/Headers/Enemy_1.h
 

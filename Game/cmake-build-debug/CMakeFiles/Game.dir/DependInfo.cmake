@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/Usuario/Desktop/Game/Headers/Enemy_1.cpp" "C:/Users/Usuario/Desktop/Game/cmake-build-debug/CMakeFiles/Game.dir/Headers/Enemy_1.cpp.obj"
   "C:/Users/Usuario/Desktop/Game/Headers/Spaceship.cpp" "C:/Users/Usuario/Desktop/Game/cmake-build-debug/CMakeFiles/Game.dir/Headers/Spaceship.cpp.obj"
   "C:/Users/Usuario/Desktop/Game/main.cpp" "C:/Users/Usuario/Desktop/Game/cmake-build-debug/CMakeFiles/Game.dir/main.cpp.obj"
   )
