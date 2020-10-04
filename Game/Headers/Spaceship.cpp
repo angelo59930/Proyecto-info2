@@ -48,3 +48,4 @@ void Spaceship::draw(RenderWindow &window) {
     window.draw(sp);
 
 }
+

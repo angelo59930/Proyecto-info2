@@ -4,14 +4,14 @@
 
 Enemy_1::Enemy_1() {
     x = 0;
-    y = 1;
+    y = 1-64;
     animation = 0;
 }
 
 void Enemy_1::move() {
     y += 3;
- //   if (y > HEIGHT)
- //      y = 0;
+    if (y > HEIGHT)
+       y = 1-64;
 }
 
 void Enemy_1::draw(RenderWindow &window) {

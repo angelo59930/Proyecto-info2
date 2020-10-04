@@ -22,6 +22,7 @@ public:
     bool getExistence();
 
 
+
     void move();
 
     void draw(RenderWindow &window);

@@ -18,6 +18,8 @@ public:
 
     void move(int x,int y);
 
+
+
     void draw(RenderWindow &window);
 
 };
