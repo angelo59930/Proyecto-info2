@@ -16,8 +16,9 @@ private:
 public:
     Spaceship(int initial_x, int initial_y, Texture &tex);
 
-    void move(int x,int y);
+    void setPosition(int x, int y);
 
+    void move(int x,int y);
 
 
     void draw(RenderWindow &window);

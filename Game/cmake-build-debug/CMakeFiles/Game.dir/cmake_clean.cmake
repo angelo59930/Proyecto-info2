@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Game.dir/Headers/Enemy_1.cpp.obj"
+  "CMakeFiles/Game.dir/Headers/Asteroid.cpp.obj"
   "CMakeFiles/Game.dir/Headers/Spaceship.cpp.obj"
   "CMakeFiles/Game.dir/main.cpp.obj"
   "Game.exe"

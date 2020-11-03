@@ -1,6 +1,3 @@
-//
-// Created by Usuario on 03/09/2020.
-//
 
 #include "Spaceship.h"
 #define WIDTH 575
@@ -48,4 +45,10 @@ void Spaceship::draw(RenderWindow &window) {
     window.draw(sp);
 
 }
+
+void Spaceship::setPosition(int x, int y) {
+    this->x = x;
+    this->y = y;
+}
+
 

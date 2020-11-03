@@ -102,31 +102,31 @@ CMakeFiles/Game.dir/Headers/Spaceship.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/Headers/Spaceship.cpp.s"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Usuario\Desktop\Game\Headers\Spaceship.cpp -o CMakeFiles\Game.dir\Headers\Spaceship.cpp.s
 
-CMakeFiles/Game.dir/Headers/Enemy_1.cpp.obj: CMakeFiles/Game.dir/flags.make
-CMakeFiles/Game.dir/Headers/Enemy_1.cpp.obj: ../Headers/Enemy_1.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Usuario\Desktop\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Game.dir/Headers/Enemy_1.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Game.dir\Headers\Enemy_1.cpp.obj -c C:\Users\Usuario\Desktop\Game\Headers\Enemy_1.cpp
+CMakeFiles/Game.dir/Headers/Asteroid.cpp.obj: CMakeFiles/Game.dir/flags.make
+CMakeFiles/Game.dir/Headers/Asteroid.cpp.obj: ../Headers/Asteroid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Usuario\Desktop\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Game.dir/Headers/Asteroid.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Game.dir\Headers\Asteroid.cpp.obj -c C:\Users\Usuario\Desktop\Game\Headers\Asteroid.cpp
 
-CMakeFiles/Game.dir/Headers/Enemy_1.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/Headers/Enemy_1.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Usuario\Desktop\Game\Headers\Enemy_1.cpp > CMakeFiles\Game.dir\Headers\Enemy_1.cpp.i
+CMakeFiles/Game.dir/Headers/Asteroid.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/Headers/Asteroid.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Usuario\Desktop\Game\Headers\Asteroid.cpp > CMakeFiles\Game.dir\Headers\Asteroid.cpp.i
 
-CMakeFiles/Game.dir/Headers/Enemy_1.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/Headers/Enemy_1.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Usuario\Desktop\Game\Headers\Enemy_1.cpp -o CMakeFiles\Game.dir\Headers\Enemy_1.cpp.s
+CMakeFiles/Game.dir/Headers/Asteroid.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/Headers/Asteroid.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Usuario\Desktop\Game\Headers\Asteroid.cpp -o CMakeFiles\Game.dir\Headers\Asteroid.cpp.s
 
 # Object files for target Game
 Game_OBJECTS = \
 "CMakeFiles/Game.dir/main.cpp.obj" \
 "CMakeFiles/Game.dir/Headers/Spaceship.cpp.obj" \
-"CMakeFiles/Game.dir/Headers/Enemy_1.cpp.obj"
+"CMakeFiles/Game.dir/Headers/Asteroid.cpp.obj"
 
 # External object files for target Game
 Game_EXTERNAL_OBJECTS =
 
 Game.exe: CMakeFiles/Game.dir/main.cpp.obj
 Game.exe: CMakeFiles/Game.dir/Headers/Spaceship.cpp.obj
-Game.exe: CMakeFiles/Game.dir/Headers/Enemy_1.cpp.obj
+Game.exe: CMakeFiles/Game.dir/Headers/Asteroid.cpp.obj
 Game.exe: CMakeFiles/Game.dir/build.make
 Game.exe: CMakeFiles/Game.dir/linklibs.rsp
 Game.exe: CMakeFiles/Game.dir/objects1.rsp

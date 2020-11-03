@@ -82,10 +82,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Usuario/Desktop/Game/Headers/Enemy_1.cpp">
+		<Unit filename="C:/Users/Usuario/Desktop/Game/Headers/Asteroid.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Game/Headers/Enemy_1.h">
+		<Unit filename="C:/Users/Usuario/Desktop/Game/Headers/Asteroid.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/Usuario/Desktop/Game/Headers/List/LinkedList.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/Usuario/Desktop/Game/Headers/List/Node.h">
 			<Option target="Game"/>
 		</Unit>
 		<Unit filename="C:/Users/Usuario/Desktop/Game/Headers/Spaceship.cpp">

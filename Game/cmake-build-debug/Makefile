@@ -142,32 +142,32 @@ Game/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/build
 .PHONY : Game/fast
 
-Headers/Enemy_1.obj: Headers/Enemy_1.cpp.obj
+Headers/Asteroid.obj: Headers/Asteroid.cpp.obj
 
-.PHONY : Headers/Enemy_1.obj
+.PHONY : Headers/Asteroid.obj
 
 # target to build an object file
-Headers/Enemy_1.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Headers/Enemy_1.cpp.obj
-.PHONY : Headers/Enemy_1.cpp.obj
+Headers/Asteroid.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Headers/Asteroid.cpp.obj
+.PHONY : Headers/Asteroid.cpp.obj
 
-Headers/Enemy_1.i: Headers/Enemy_1.cpp.i
+Headers/Asteroid.i: Headers/Asteroid.cpp.i
 
-.PHONY : Headers/Enemy_1.i
+.PHONY : Headers/Asteroid.i
 
 # target to preprocess a source file
-Headers/Enemy_1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Headers/Enemy_1.cpp.i
-.PHONY : Headers/Enemy_1.cpp.i
+Headers/Asteroid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Headers/Asteroid.cpp.i
+.PHONY : Headers/Asteroid.cpp.i
 
-Headers/Enemy_1.s: Headers/Enemy_1.cpp.s
+Headers/Asteroid.s: Headers/Asteroid.cpp.s
 
-.PHONY : Headers/Enemy_1.s
+.PHONY : Headers/Asteroid.s
 
 # target to generate assembly for a file
-Headers/Enemy_1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Headers/Enemy_1.cpp.s
-.PHONY : Headers/Enemy_1.cpp.s
+Headers/Asteroid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Headers/Asteroid.cpp.s
+.PHONY : Headers/Asteroid.cpp.s
 
 Headers/Spaceship.obj: Headers/Spaceship.cpp.obj
 
@@ -232,9 +232,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Game
-	@echo ... Headers/Enemy_1.obj
-	@echo ... Headers/Enemy_1.i
-	@echo ... Headers/Enemy_1.s
+	@echo ... Headers/Asteroid.obj
+	@echo ... Headers/Asteroid.i
+	@echo ... Headers/Asteroid.s
 	@echo ... Headers/Spaceship.obj
 	@echo ... Headers/Spaceship.i
 	@echo ... Headers/Spaceship.s
