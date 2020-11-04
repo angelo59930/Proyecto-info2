@@ -11,9 +11,8 @@ Asteroid::Asteroid(int pos, Texture &tx) {
 }
 
 void Asteroid::move() {
-    y += 3;
-    if (y > HEIGHT)
-        y = 1-64;
+    if (y < HEIGHT)
+        y += 3;
 }
 
 void Asteroid::draw(RenderWindow &window) {
@@ -34,4 +33,11 @@ void Asteroid::draw(RenderWindow &window) {
 
     sp.setTextureRect({aux * 64, 0, 64 , 64});
     window.draw(sp);
+}
+
+bool Asteroid::algo() {
+    if (y < HEIGHT)
+        return false;
+
+    return true;
 }

@@ -17,6 +17,8 @@ public:
 
     void move();
 
+    bool algo();
+
 
     void draw(RenderWindow &window);
 };
