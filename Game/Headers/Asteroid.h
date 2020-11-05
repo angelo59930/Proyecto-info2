@@ -15,9 +15,9 @@ private:
 public:
     Asteroid(int pos,Texture &tx);
 
-    void move();
+    bool move();
 
-    bool algo();
+
 
 
     void draw(RenderWindow &window);

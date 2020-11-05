@@ -23,7 +23,7 @@ void Move_player(Spaceship &player);
 
 void load_score(std::stack<int> &stack_score);
 
-void extrac_data(LinkedList<String> &score_list);
+void extrac_data(std::queue<String> &score_queue);
 
 void
 dead_player(bool dead, RenderWindow &window, Text &tx_menu, Text &tx_aux1, const Sprite &background1, Spaceship &player,
@@ -33,7 +33,7 @@ dead_player(bool dead, RenderWindow &window, Text &tx_menu, Text &tx_aux1, const
 using namespace sf;
 
 int main() {
-    int score = 0;
+    int score = 0,clock = 0;
     float background_y = 0;
     bool pause = false, menu = true, menu_score = false, life = false, game = false, dead = false;
 
@@ -87,7 +87,7 @@ int main() {
         return EXIT_FAILURE;
     }
 
-    std::queue<Asteroid> queue_asteroid;
+    LinkedList<Asteroid *> asteroid_list;
     std::stack<int> stack_score;
 
     window.setFramerateLimit(60);
@@ -114,7 +114,6 @@ int main() {
             }
 
 
-            load_score(stack_score);
 
             if (Keyboard::isKeyPressed(Keyboard::Enter)) {
                 game = true;
@@ -129,6 +128,7 @@ int main() {
             }
 
             if (Keyboard::isKeyPressed(Keyboard::S)) {
+                load_score(stack_score);
                 menu_score = true;
                 break;
             }
@@ -142,7 +142,7 @@ int main() {
 
 
         while (menu_score) {
-            LinkedList<String> score_list;
+            std::queue<String> score_queue;
 
             tx_aux1.setString("SCORES");
             tx_aux1.setCharacterSize(70);
@@ -164,18 +164,24 @@ int main() {
                 break;
             }
 
-            extrac_data(score_list);
+            extrac_data(score_queue);
 
             window.clear();
             window.draw(background1);
             window.draw(tx_aux1);
             window.draw(tx_aux3);
-            for (int i = 0; i < 10; ++i) {
 
-                tx_aux2.setString(score_list.get(i));
+            for (int i = 0; i < 10; i++) {
+                if (!score_queue.empty()) {
+                    tx_aux2.setString(score_queue.front());
+                    score_queue.pop();
+                }
+                else
+                    tx_aux2.setString("0");
                 tx_aux2.setCharacterSize(70);
                 tx_aux2.setPosition(205, 150 + (i * 30));
                 window.draw(tx_aux2);
+
 
             }
             window.display();
@@ -194,21 +200,48 @@ int main() {
                 }
             }
 
-            if (score <= 500) {
-                int aux = rand() % 1 + 3;
+
+
+            if (score <= 500 && clock == 0) {
+                int aux = rand() % 3 - 0;
                 for (int i = 0; i < aux; ++i) {
-                    Asteroid a((rand() % 8 - 0), tex_asteroid);
-                    queue_asteroid.push(a);
+                    asteroid_list.push_front(new Asteroid(rand() % 9 - 0, tex_asteroid));
                 }
             }
 
-            for (int i = 0; i < queue_asteroid.size(); ++i) {
-                Asteroid p = queue_asteroid.front();
-                p.move();
+            if (score > 500 && score < 1000 && clock == 0) {
+                int aux = rand() % 4 - 0;
+                for (int i = 0; i < aux; ++i) {
+                    asteroid_list.push_front(new Asteroid(rand() % 9 - 0, tex_asteroid));
+                }
+            }
+
+            if (score > 1000 && score < 1500 && clock == 0) {
+                int aux = rand() % 6 - 0;
+                for (int i = 0; i < aux; ++i) {
+                    asteroid_list.push_front(new Asteroid(rand() % 9 - 0, tex_asteroid));
+                }
+            }
+
+            if (score > 1500 && clock == 0) {
+                int aux = rand() % 8 - 0;
+                for (int i = 0; i < aux; ++i) {
+                    asteroid_list.push_front(new Asteroid(rand() % 9 - 0, tex_asteroid));
+                }
             }
 
 
-            if (Keyboard::isKeyPressed(Keyboard::M)) {       ///TEMPORAL
+            for (int i = 0; i < asteroid_list.size(); ++i) {
+                if(!asteroid_list.get(i)->move())
+                    asteroid_list.erase(i);
+            }
+
+            clock++;
+            if (clock == 50)
+                clock=0;
+
+            
+            if (Keyboard::isKeyPressed(Keyboard::M)) {      ///TEMPORAL
                 life = false;                                   ///TEMPORAL
             }                                                   ///TEMPORAL
 
@@ -218,6 +251,9 @@ int main() {
             tx_aux1.setCharacterSize(40);
             tx_aux1.setPosition(260, 550);
 
+            if (!life){
+                stack_score.push(score);
+            }
 
             move_background(background_y, tex_background, sp_background1, sp_background2, score);
 
@@ -239,15 +275,10 @@ int main() {
                 game = false;
                 dead = true;
             }
-
-            for (int i = 0; i < queue_asteroid.size(); ++i) {
-                Asteroid p = queue_asteroid.front();
-
-                if (!p.algo())
-                    queue_asteroid.pop();
-                else
-                    p.draw(window);
+            for (asteroid_list.loopStart();!asteroid_list.loopEnd();asteroid_list.loopNext()) {
+                asteroid_list.loopGet()->draw(window);
             }
+
             window.display();
         }
 
@@ -292,34 +323,29 @@ dead_player(bool dead, RenderWindow &window, Text &tx_menu, Text &tx_aux1, const
     }
 }
 
-void extrac_data(LinkedList<String> &score_list) {
+void extrac_data(std::queue<String> &score_queue) {
     String scr;
     std::ifstream reed;
-    int i = 0, aux;
+    int aux;
     reed.open("score.txt");
     while (!reed.eof()) {
         reed >> aux;
         scr = std::to_string(aux);
-        score_list.insert(i, scr);
-        i++;
+        score_queue.push(scr);
+
     }
     reed.close();
+
 }
 
 void load_score(std::stack<int> &stack_score) {
     std::ofstream write;
     write.open("score.txt");
     while (true){
-        int b = stack_score.size();
         for (int i = 0;!stack_score.empty(); ++i) {
             int a = stack_score.top();
-            write << a << "\n";
+            write << a << std::endl;
             stack_score.pop();
-        }
-        if (b < 10){
-            for (int i = b; i < 10; i++) {
-                write << 0 << "\n";
-            }
         }
         break;
     }
