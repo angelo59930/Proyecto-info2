@@ -23,9 +23,12 @@ void Move_player(Spaceship &player);
 
 void load_score(std::stack<int> &stack_score);
 
-void extrac_data(std::queue<String> &score_queue);
+void extracData(std::queue<String> &score_queue);
 
 
+void
+dead_menu(bool dead, RenderWindow &window, Text &tx_menu, Text &tx_aux1, const Sprite &background1, Spaceship &player,
+          int &score, bool &menu, bool &life, bool &game, Event &event);
 
 using namespace sf;
 
@@ -40,10 +43,8 @@ int main() {
 
     ///----------------------------------------------------------------------------------------
     Font words;
-    if (!words.loadFromFile("Font/8-bit Arcade In.ttf")) {  //origen: Damien Gosset-https://www.dafont.com/es/8-bit-arcade.font
-        std::cout << "no se pudo cargar la fuente" << std::endl;
-        return EXIT_FAILURE;
-    }
+    words.loadFromFile("Font/8-bit Arcade In.ttf"); //origen: Damien Gosset-https://www.dafont.com/es/8-bit-arcade.font
+
     Text tx_menu;
     Text tx_aux1;
     Text tx_aux2;
@@ -56,10 +57,8 @@ int main() {
     ///--------------SET BACKGROUND------------------------------------------------------------
 
     Texture tex_background;
-    if (!tex_background.loadFromFile("images/bg_space_seamless_1.png")) {  //origen:https://opengameart.org/content/space-background-7
-        std::cout << "no se pudo cargar el background" << std::endl;
-        return EXIT_FAILURE;
-    }
+    tex_background.loadFromFile("images/bg_space_seamless_1.png");  //origen:https://opengameart.org/content/space-background-7
+
     Sprite sp_background1;
     Sprite sp_background2;
 
@@ -70,19 +69,14 @@ int main() {
     ///------------SET PLAYER---------------------------------------------------------------------
 
     Texture tex_spaceship;
-    if (!tex_spaceship.loadFromFile("images/nave/ship_x2_64x64.png")) {
-        std::cout << "no se pudo cargar la spaceship" << std::endl;
-        return EXIT_FAILURE;
-    }
+    tex_spaceship.loadFromFile("images/nave/ship_x2_64x64.png");
+
     Spaceship player((250), (HEIGHT / 2), tex_spaceship);
 
     ///--------------------------------------------------------------------------------------------
 
     Texture tex_asteroid;
-    if (!tex_asteroid.loadFromFile("images/asteroid/asteroid.png")) {
-        std::cout << "no se pudo cargar asteroid" << std::endl;
-        return EXIT_FAILURE;
-    }
+    tex_asteroid.loadFromFile("images/asteroid/asteroid.png");
 
     LinkedList<Asteroid *> asteroid_list;
     std::stack<int> stack_score;
@@ -143,7 +137,7 @@ int main() {
             while (window.pollEvent(event)) {
                 if (event.type == Event::Closed || !window.isOpen()) {
                     window.close();
-                    return EXIT_SUCCESS;
+                    exit (EXIT_SUCCESS);
                 }
             }
             tx_aux1.setString("SCORES");
@@ -160,7 +154,7 @@ int main() {
                 break;
             }
 
-            extrac_data(score_queue);
+            extracData(score_queue);
 
             window.clear();
             window.draw(background1);
@@ -183,41 +177,8 @@ int main() {
             window.display();
         }
 
-        while (dead){
-            player.setPosition((250), (HEIGHT / 2));
+        dead_menu(dead, window, tx_menu, tx_aux1, background1, player, score, menu, life, game, event);
 
-            while (window.pollEvent(event)) {
-                if (event.type == Event::Closed || !window.isOpen()) {
-                    window.close();
-                    return EXIT_SUCCESS;
-                }
-            }
-
-            tx_menu.setString("GAME OVER");
-            tx_menu.setCharacterSize(80);
-            tx_menu.setPosition(120,0);
-
-            tx_aux1.setString("PRESS Enter TO RESET\nPRESS Backspace TO EXIT");
-            tx_aux1.setCharacterSize(40);
-            tx_aux1.setPosition(73,480);
-
-            if (Keyboard::isKeyPressed(Keyboard::Enter)){
-                score = 0;
-                game = true;
-                life = true;
-                break;
-            }
-            if (Keyboard::isKeyPressed(Keyboard::BackSpace)){
-                menu = true;
-                break;
-            }
-
-            window.clear();
-            window.draw(background1);
-            window.draw(tx_aux1);
-            window.draw(tx_menu);
-            window.display();
-        }
         while (game) {
 
 
@@ -301,6 +262,7 @@ int main() {
             if (life)
                 player.draw(window);
             if (!life) {
+                asteroid_list.~LinkedList();
                 stack_score.push(score);
                 game = false;
                 dead = true;
@@ -319,8 +281,48 @@ int main() {
     return EXIT_SUCCESS;
 }
 
+void
+dead_menu(bool dead, RenderWindow &window, Text &tx_menu, Text &tx_aux1, const Sprite &background1, Spaceship &player,
+          int &score, bool &menu, bool &life, bool &game, Event &event) {
+    while (dead){
+        player.setPosition((250), (HEIGHT / 2));
 
-void extrac_data(std::queue<String> &score_queue) {
+        while (window.pollEvent(event)) {
+            if (event.type == Event::Closed || !window.isOpen()) {
+                window.close();
+                exit (EXIT_SUCCESS);
+            }
+        }
+
+        tx_menu.setString("GAME OVER");
+        tx_menu.setCharacterSize(80);
+        tx_menu.setPosition(120,0);
+
+        tx_aux1.setString("PRESS Enter TO RESET\nPRESS Backspace TO EXIT");
+        tx_aux1.setCharacterSize(40);
+        tx_aux1.setPosition(73,480);
+
+        if (Keyboard::isKeyPressed(Keyboard::Enter)){
+            score = 0;
+            game = true;
+            life = true;
+            break;
+        }
+        if (Keyboard::isKeyPressed(Keyboard::BackSpace)){
+            menu = true;
+            break;
+        }
+
+        window.clear();
+        window.draw(background1);
+        window.draw(tx_aux1);
+        window.draw(tx_menu);
+        window.display();
+    }
+}
+
+
+void extracData(std::queue<String> &score_queue) {
     String scr;
     std::ifstream reed;
     int aux;
@@ -337,7 +339,7 @@ void extrac_data(std::queue<String> &score_queue) {
 
 void load_score(std::stack<int> &stack_score) {
     std::ofstream write;
-    write.open("score.txt");
+    write.open("score.txt",std::fstream::app);
     while (true){
         for (int i = 0;!stack_score.empty(); ++i) {
             int a = stack_score.top();
@@ -396,7 +398,7 @@ void paused(bool &pause, RenderWindow &window, const Sprite &background1, Event 
         while (window.pollEvent(event)){
             if (event.type == Event::Closed || !window.isOpen()){
                 window.close();
-                return;
+                exit(EXIT_SUCCESS);
             }
         }
 
