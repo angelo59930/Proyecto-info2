@@ -5,7 +5,7 @@
 #include <SFML/Graphics.hpp>
 #include <stack>
 #include <queue>
-
+#include "Headers/Colision/Collision.h"
 #include "Headers/List/LinkedList.h"
 #include "Headers/Spaceship.h"
 #include "Headers/Asteroid.h"
@@ -25,9 +25,6 @@ void load_score(std::stack<int> &stack_score);
 
 void extrac_data(std::queue<String> &score_queue);
 
-void
-dead_player(bool dead, RenderWindow &window, Text &tx_menu, Text &tx_aux1, const Sprite &background1, Spaceship &player,
-            int &score, bool &menu, bool &life, bool &game);
 
 
 using namespace sf;
@@ -143,7 +140,12 @@ int main() {
 
         while (menu_score) {
             std::queue<String> score_queue;
-
+            while (window.pollEvent(event)) {
+                if (event.type == Event::Closed || !window.isOpen()) {
+                    window.close();
+                    return EXIT_SUCCESS;
+                }
+            }
             tx_aux1.setString("SCORES");
             tx_aux1.setCharacterSize(70);
             tx_aux1.setPosition(180, 100);
@@ -152,12 +154,6 @@ int main() {
             tx_aux3.setCharacterSize(40);
             tx_aux3.setPosition(55, 480);
 
-            while (window.pollEvent(event)) {
-                if (event.type == Event::Closed || !window.isOpen()) {
-                    window.close();
-                    return EXIT_SUCCESS;
-                }
-            }
 
             if (Keyboard::isKeyPressed(Keyboard::BackSpace)) {
                 menu_score = false;
@@ -187,11 +183,8 @@ int main() {
             window.display();
         }
 
-        dead_player(dead, window, tx_menu, tx_aux1, background1, player, score, menu, life, game);
-
-        while (game) {
-
-            score++;
+        while (dead){
+            player.setPosition((250), (HEIGHT / 2));
 
             while (window.pollEvent(event)) {
                 if (event.type == Event::Closed || !window.isOpen()) {
@@ -200,7 +193,43 @@ int main() {
                 }
             }
 
+            tx_menu.setString("GAME OVER");
+            tx_menu.setCharacterSize(80);
+            tx_menu.setPosition(120,0);
 
+            tx_aux1.setString("PRESS Enter TO RESET\nPRESS Backspace TO EXIT");
+            tx_aux1.setCharacterSize(40);
+            tx_aux1.setPosition(73,480);
+
+            if (Keyboard::isKeyPressed(Keyboard::Enter)){
+                score = 0;
+                game = true;
+                life = true;
+                break;
+            }
+            if (Keyboard::isKeyPressed(Keyboard::BackSpace)){
+                menu = true;
+                break;
+            }
+
+            window.clear();
+            window.draw(background1);
+            window.draw(tx_aux1);
+            window.draw(tx_menu);
+            window.display();
+        }
+        while (game) {
+
+
+
+            while (window.pollEvent(event)) {
+                if (event.type == Event::Closed || !window.isOpen()) {
+                    window.close();
+                    return EXIT_SUCCESS;
+                }
+            }
+
+            score++;
 
             if (score <= 500 && clock == 0) {
                 int aux = rand() % 3 - 0;
@@ -232,18 +261,21 @@ int main() {
 
 
             for (int i = 0; i < asteroid_list.size(); ++i) {
-                if(!asteroid_list.get(i)->move())
+                if(!asteroid_list.get(i)->move()) {
                     asteroid_list.erase(i);
+                }
+
+            }
+
+            for (int i = 0; i < asteroid_list.size(); ++i) {
+                if(Collision::PixelPerfectTest(asteroid_list.get(i)->getSprite(),player.getSprite())){
+                    life = false;
+                }
             }
 
             clock++;
             if (clock == 50)
                 clock=0;
-
-            
-            if (Keyboard::isKeyPressed(Keyboard::M)) {      ///TEMPORAL
-                life = false;                                   ///TEMPORAL
-            }                                                   ///TEMPORAL
 
 
             String sc = std::to_string(score);
@@ -251,9 +283,6 @@ int main() {
             tx_aux1.setCharacterSize(40);
             tx_aux1.setPosition(260, 550);
 
-            if (!life){
-                stack_score.push(score);
-            }
 
             move_background(background_y, tex_background, sp_background1, sp_background2, score);
 
@@ -272,6 +301,7 @@ int main() {
             if (life)
                 player.draw(window);
             if (!life) {
+                stack_score.push(score);
                 game = false;
                 dead = true;
             }
@@ -289,39 +319,6 @@ int main() {
     return EXIT_SUCCESS;
 }
 
-void
-dead_player(bool dead, RenderWindow &window, Text &tx_menu, Text &tx_aux1, const Sprite &background1, Spaceship &player,
-            int &score, bool &menu, bool &life, bool &game) {
-    while (dead){
-        player.setPosition((250), (HEIGHT / 2));
-
-
-        tx_menu.setString("GAME OVER");
-        tx_menu.setCharacterSize(80);
-        tx_menu.setPosition(120,0);
-
-        tx_aux1.setString("PRESS Enter TO RESET\nPRESS Backspace TO EXIT");
-        tx_aux1.setCharacterSize(40);
-        tx_aux1.setPosition(73,480);
-
-        if (Keyboard::isKeyPressed(Keyboard::Enter)){
-            score = 0;
-            game = true;
-            life = true;
-            break;
-        }
-        if (Keyboard::isKeyPressed(Keyboard::BackSpace)){
-            menu = true;
-            break;
-        }
-
-        window.clear();
-        window.draw(background1);
-        window.draw(tx_aux1);
-        window.draw(tx_menu);
-        window.display();
-    }
-}
 
 void extrac_data(std::queue<String> &score_queue) {
     String scr;

@@ -169,6 +169,33 @@ Headers/Asteroid.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Headers/Asteroid.cpp.s
 .PHONY : Headers/Asteroid.cpp.s
 
+Headers/Colision/Collision.obj: Headers/Colision/Collision.cpp.obj
+
+.PHONY : Headers/Colision/Collision.obj
+
+# target to build an object file
+Headers/Colision/Collision.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Headers/Colision/Collision.cpp.obj
+.PHONY : Headers/Colision/Collision.cpp.obj
+
+Headers/Colision/Collision.i: Headers/Colision/Collision.cpp.i
+
+.PHONY : Headers/Colision/Collision.i
+
+# target to preprocess a source file
+Headers/Colision/Collision.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Headers/Colision/Collision.cpp.i
+.PHONY : Headers/Colision/Collision.cpp.i
+
+Headers/Colision/Collision.s: Headers/Colision/Collision.cpp.s
+
+.PHONY : Headers/Colision/Collision.s
+
+# target to generate assembly for a file
+Headers/Colision/Collision.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Headers/Colision/Collision.cpp.s
+.PHONY : Headers/Colision/Collision.cpp.s
+
 Headers/Spaceship.obj: Headers/Spaceship.cpp.obj
 
 .PHONY : Headers/Spaceship.obj
@@ -235,6 +262,9 @@ help:
 	@echo ... Headers/Asteroid.obj
 	@echo ... Headers/Asteroid.i
 	@echo ... Headers/Asteroid.s
+	@echo ... Headers/Colision/Collision.obj
+	@echo ... Headers/Colision/Collision.i
+	@echo ... Headers/Colision/Collision.s
 	@echo ... Headers/Spaceship.obj
 	@echo ... Headers/Spaceship.i
 	@echo ... Headers/Spaceship.s

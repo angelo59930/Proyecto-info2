@@ -17,7 +17,7 @@ public:
 
     bool move();
 
-
+    Sprite getSprite();
 
 
     void draw(RenderWindow &window);

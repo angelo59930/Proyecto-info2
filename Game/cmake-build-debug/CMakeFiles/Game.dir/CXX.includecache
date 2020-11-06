@@ -10,6 +10,18 @@ C:/Users/Usuario/Desktop/Game/Headers/Asteroid.h
 SFML/Graphics.hpp
 -
 
+C:/Users/Usuario/Desktop/Game/Headers/Colision/Collision.cpp
+SFML/Graphics.hpp
+-
+map
+-
+Collision.h
+C:/Users/Usuario/Desktop/Game/Headers/Colision/Collision.h
+
+C:/Users/Usuario/Desktop/Game/Headers/Colision/Collision.h
+SFML/Graphics.hpp
+-
+
 C:/Users/Usuario/Desktop/Game/Headers/List/LinkedList.h
 Node.h
 C:/Users/Usuario/Desktop/Game/Headers/List/Node.h
@@ -35,6 +47,8 @@ stack
 -
 queue
 -
+Headers/Colision/Collision.h
+C:/Users/Usuario/Desktop/Game/Headers/Colision/Collision.h
 Headers/List/LinkedList.h
 C:/Users/Usuario/Desktop/Game/Headers/List/LinkedList.h
 Headers/Spaceship.h

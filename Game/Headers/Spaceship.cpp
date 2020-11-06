@@ -51,4 +51,8 @@ void Spaceship::setPosition(int x, int y) {
     this->y = y;
 }
 
+Sprite Spaceship::getSprite() {
+    return this->sp;
+}
+
 

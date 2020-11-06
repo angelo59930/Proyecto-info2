@@ -37,3 +37,7 @@ void Asteroid::draw(RenderWindow &window) {
     window.draw(sp);
 }
 
+Sprite Asteroid::getSprite() {
+    return this->sp;
+}
+

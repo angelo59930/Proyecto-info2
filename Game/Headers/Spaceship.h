@@ -20,6 +20,8 @@ public:
 
     void move(int x,int y);
 
+    Sprite getSprite();
+
 
     void draw(RenderWindow &window);
 

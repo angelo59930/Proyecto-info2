@@ -4,11 +4,15 @@
 CMakeFiles/Game.dir/Headers/Asteroid.cpp.obj
  C:/Users/Usuario/Desktop/Game/Headers/Asteroid.cpp
  C:/Users/Usuario/Desktop/Game/Headers/Asteroid.h
+CMakeFiles/Game.dir/Headers/Colision/Collision.cpp.obj
+ C:/Users/Usuario/Desktop/Game/Headers/Colision/Collision.cpp
+ C:/Users/Usuario/Desktop/Game/Headers/Colision/Collision.h
 CMakeFiles/Game.dir/Headers/Spaceship.cpp.obj
  C:/Users/Usuario/Desktop/Game/Headers/Spaceship.cpp
  C:/Users/Usuario/Desktop/Game/Headers/Spaceship.h
 CMakeFiles/Game.dir/main.cpp.obj
  C:/Users/Usuario/Desktop/Game/Headers/Asteroid.h
+ C:/Users/Usuario/Desktop/Game/Headers/Colision/Collision.h
  C:/Users/Usuario/Desktop/Game/Headers/List/LinkedList.h
  C:/Users/Usuario/Desktop/Game/Headers/List/Node.h
  C:/Users/Usuario/Desktop/Game/Headers/Spaceship.h

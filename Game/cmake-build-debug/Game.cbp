@@ -88,6 +88,12 @@
 		<Unit filename="C:/Users/Usuario/Desktop/Game/Headers/Asteroid.h">
 			<Option target="Game"/>
 		</Unit>
+		<Unit filename="C:/Users/Usuario/Desktop/Game/Headers/Colision/Collision.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/Usuario/Desktop/Game/Headers/Colision/Collision.h">
+			<Option target="Game"/>
+		</Unit>
 		<Unit filename="C:/Users/Usuario/Desktop/Game/Headers/List/LinkedList.h">
 			<Option target="Game"/>
 		</Unit>
