@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Usuario/Desktop/Game/Headers/Asteroid.cpp" "C:/Users/Usuario/Desktop/Game/cmake-build-debug/CMakeFiles/Game.dir/Headers/Asteroid.cpp.obj"
-  "C:/Users/Usuario/Desktop/Game/Headers/Colision/Collision.cpp" "C:/Users/Usuario/Desktop/Game/cmake-build-debug/CMakeFiles/Game.dir/Headers/Colision/Collision.cpp.obj"
-  "C:/Users/Usuario/Desktop/Game/Headers/Spaceship.cpp" "C:/Users/Usuario/Desktop/Game/cmake-build-debug/CMakeFiles/Game.dir/Headers/Spaceship.cpp.obj"
-  "C:/Users/Usuario/Desktop/Game/main.cpp" "C:/Users/Usuario/Desktop/Game/cmake-build-debug/CMakeFiles/Game.dir/main.cpp.obj"
+  "C:/Users/Usuario/Desktop/Facultad/Game/Headers/Asteroid.cpp" "C:/Users/Usuario/Desktop/Facultad/Game/cmake-build-debug/CMakeFiles/Game.dir/Headers/Asteroid.cpp.obj"
+  "C:/Users/Usuario/Desktop/Facultad/Game/Headers/Colision/Collision.cpp" "C:/Users/Usuario/Desktop/Facultad/Game/cmake-build-debug/CMakeFiles/Game.dir/Headers/Colision/Collision.cpp.obj"
+  "C:/Users/Usuario/Desktop/Facultad/Game/Headers/Spaceship.cpp" "C:/Users/Usuario/Desktop/Facultad/Game/cmake-build-debug/CMakeFiles/Game.dir/Headers/Spaceship.cpp.obj"
+  "C:/Users/Usuario/Desktop/Facultad/Game/main.cpp" "C:/Users/Usuario/Desktop/Facultad/Game/cmake-build-debug/CMakeFiles/Game.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

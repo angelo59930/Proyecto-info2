@@ -62,10 +62,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.2\bin\cmake\win\bin\cmake.exe" -E rm
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Usuario\Desktop\Game
+CMAKE_SOURCE_DIR = C:\Users\Usuario\Desktop\Facultad\Game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Usuario\Desktop\Game\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Usuario\Desktop\Facultad\Game\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Game.dir/depend.make
@@ -78,55 +78,55 @@ include CMakeFiles/Game.dir/flags.make
 
 CMakeFiles/Game.dir/main.cpp.obj: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Usuario\Desktop\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Game.dir/main.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Game.dir\main.cpp.obj -c C:\Users\Usuario\Desktop\Game\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Usuario\Desktop\Facultad\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Game.dir/main.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Game.dir\main.cpp.obj -c C:\Users\Usuario\Desktop\Facultad\Game\main.cpp
 
 CMakeFiles/Game.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/main.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Usuario\Desktop\Game\main.cpp > CMakeFiles\Game.dir\main.cpp.i
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Usuario\Desktop\Facultad\Game\main.cpp > CMakeFiles\Game.dir\main.cpp.i
 
 CMakeFiles/Game.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/main.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Usuario\Desktop\Game\main.cpp -o CMakeFiles\Game.dir\main.cpp.s
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Usuario\Desktop\Facultad\Game\main.cpp -o CMakeFiles\Game.dir\main.cpp.s
 
 CMakeFiles/Game.dir/Headers/Spaceship.cpp.obj: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/Headers/Spaceship.cpp.obj: ../Headers/Spaceship.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Usuario\Desktop\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Game.dir/Headers/Spaceship.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Game.dir\Headers\Spaceship.cpp.obj -c C:\Users\Usuario\Desktop\Game\Headers\Spaceship.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Usuario\Desktop\Facultad\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Game.dir/Headers/Spaceship.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Game.dir\Headers\Spaceship.cpp.obj -c C:\Users\Usuario\Desktop\Facultad\Game\Headers\Spaceship.cpp
 
 CMakeFiles/Game.dir/Headers/Spaceship.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/Headers/Spaceship.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Usuario\Desktop\Game\Headers\Spaceship.cpp > CMakeFiles\Game.dir\Headers\Spaceship.cpp.i
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Usuario\Desktop\Facultad\Game\Headers\Spaceship.cpp > CMakeFiles\Game.dir\Headers\Spaceship.cpp.i
 
 CMakeFiles/Game.dir/Headers/Spaceship.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/Headers/Spaceship.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Usuario\Desktop\Game\Headers\Spaceship.cpp -o CMakeFiles\Game.dir\Headers\Spaceship.cpp.s
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Usuario\Desktop\Facultad\Game\Headers\Spaceship.cpp -o CMakeFiles\Game.dir\Headers\Spaceship.cpp.s
 
 CMakeFiles/Game.dir/Headers/Asteroid.cpp.obj: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/Headers/Asteroid.cpp.obj: ../Headers/Asteroid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Usuario\Desktop\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Game.dir/Headers/Asteroid.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Game.dir\Headers\Asteroid.cpp.obj -c C:\Users\Usuario\Desktop\Game\Headers\Asteroid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Usuario\Desktop\Facultad\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Game.dir/Headers/Asteroid.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Game.dir\Headers\Asteroid.cpp.obj -c C:\Users\Usuario\Desktop\Facultad\Game\Headers\Asteroid.cpp
 
 CMakeFiles/Game.dir/Headers/Asteroid.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/Headers/Asteroid.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Usuario\Desktop\Game\Headers\Asteroid.cpp > CMakeFiles\Game.dir\Headers\Asteroid.cpp.i
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Usuario\Desktop\Facultad\Game\Headers\Asteroid.cpp > CMakeFiles\Game.dir\Headers\Asteroid.cpp.i
 
 CMakeFiles/Game.dir/Headers/Asteroid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/Headers/Asteroid.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Usuario\Desktop\Game\Headers\Asteroid.cpp -o CMakeFiles\Game.dir\Headers\Asteroid.cpp.s
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Usuario\Desktop\Facultad\Game\Headers\Asteroid.cpp -o CMakeFiles\Game.dir\Headers\Asteroid.cpp.s
 
 CMakeFiles/Game.dir/Headers/Colision/Collision.cpp.obj: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/Headers/Colision/Collision.cpp.obj: ../Headers/Colision/Collision.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Usuario\Desktop\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Game.dir/Headers/Colision/Collision.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Game.dir\Headers\Colision\Collision.cpp.obj -c C:\Users\Usuario\Desktop\Game\Headers\Colision\Collision.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Usuario\Desktop\Facultad\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Game.dir/Headers/Colision/Collision.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Game.dir\Headers\Colision\Collision.cpp.obj -c C:\Users\Usuario\Desktop\Facultad\Game\Headers\Colision\Collision.cpp
 
 CMakeFiles/Game.dir/Headers/Colision/Collision.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/Headers/Colision/Collision.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Usuario\Desktop\Game\Headers\Colision\Collision.cpp > CMakeFiles\Game.dir\Headers\Colision\Collision.cpp.i
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Usuario\Desktop\Facultad\Game\Headers\Colision\Collision.cpp > CMakeFiles\Game.dir\Headers\Colision\Collision.cpp.i
 
 CMakeFiles/Game.dir/Headers/Colision/Collision.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/Headers/Colision/Collision.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Usuario\Desktop\Game\Headers\Colision\Collision.cpp -o CMakeFiles\Game.dir\Headers\Colision\Collision.cpp.s
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Usuario\Desktop\Facultad\Game\Headers\Colision\Collision.cpp -o CMakeFiles\Game.dir\Headers\Colision\Collision.cpp.s
 
 # Object files for target Game
 Game_OBJECTS = \
@@ -146,7 +146,7 @@ Game.exe: CMakeFiles/Game.dir/build.make
 Game.exe: CMakeFiles/Game.dir/linklibs.rsp
 Game.exe: CMakeFiles/Game.dir/objects1.rsp
 Game.exe: CMakeFiles/Game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Usuario\Desktop\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Game.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Usuario\Desktop\Facultad\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Game.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Game.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -159,6 +159,6 @@ CMakeFiles/Game.dir/clean:
 .PHONY : CMakeFiles/Game.dir/clean
 
 CMakeFiles/Game.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Usuario\Desktop\Game C:\Users\Usuario\Desktop\Game C:\Users\Usuario\Desktop\Game\cmake-build-debug C:\Users\Usuario\Desktop\Game\cmake-build-debug C:\Users\Usuario\Desktop\Game\cmake-build-debug\CMakeFiles\Game.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Usuario\Desktop\Facultad\Game C:\Users\Usuario\Desktop\Facultad\Game C:\Users\Usuario\Desktop\Facultad\Game\cmake-build-debug C:\Users\Usuario\Desktop\Facultad\Game\cmake-build-debug C:\Users\Usuario\Desktop\Facultad\Game\cmake-build-debug\CMakeFiles\Game.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Game.dir/depend
 

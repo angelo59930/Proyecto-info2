@@ -14,6 +14,7 @@
 #define WIDTH 575
 #define HEIGHT 600
 
+void ordenamiento(int *temperatura, int izq, int der);
 
 void paused(bool &pause,RenderWindow &window, const Sprite &background1, Event &event, Text tx_menu, Text tx_aux1, bool &menu,bool &game);
 
@@ -280,9 +281,42 @@ int main() {
 
     return EXIT_SUCCESS;
 }
+void ordenamiento(int *temp,int izq,int der) {
+    int i, j, pivote;
+    i = izq;
+    j = der;
+    pivote = temp[(i + j) / 2];
 
-void
-dead_menu(bool dead, RenderWindow &window, Text &tx_menu, Text &tx_aux1, const Sprite &background1, Spaceship &player,
+    while (i <= j) {
+        while (temp[i] < pivote) {
+            i++;
+        }
+        while (temp[j] > pivote) {
+            j--;
+        }
+        if (i <= j) {
+            int aux;
+
+            aux = temp[i];
+            temp[i] = temp[j];
+            temp[j] = aux;
+
+            i++;
+            j--;
+        }
+    }
+
+    if (izq < j) {
+        ordenamiento(temp, izq, j);
+    }
+    if (i < der) {
+        ordenamiento(temp, i, der);
+    }
+}
+
+
+void dead_menu(bool dead, RenderWindow &window, Text &tx_menu, Text &tx_aux1,
+               const Sprite &background1, Spaceship &player,
           int &score, bool &menu, bool &life, bool &game, Event &event) {
     while (dead){
         player.setPosition((250), (HEIGHT / 2));
@@ -339,7 +373,7 @@ void extracData(std::queue<String> &score_queue) {
 
 void load_score(std::stack<int> &stack_score) {
     std::ofstream write;
-    write.open("score.txt",std::fstream::app);
+    write.open("score.txt");
     while (true){
         for (int i = 0;!stack_score.empty(); ++i) {
             int a = stack_score.top();

@@ -6,25 +6,41 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Usuario/Desktop/Game/Headers/Asteroid.h
+C:/Users/Usuario/Desktop/Facultad/Game/Headers/Asteroid.cpp
+Asteroid.h
+C:/Users/Usuario/Desktop/Facultad/Game/Headers/Asteroid.h
+
+C:/Users/Usuario/Desktop/Facultad/Game/Headers/Asteroid.h
 SFML/Graphics.hpp
 -
 
-C:/Users/Usuario/Desktop/Game/Headers/Colision/Collision.h
+C:/Users/Usuario/Desktop/Facultad/Game/Headers/Colision/Collision.cpp
+SFML/Graphics.hpp
+-
+map
+-
+Collision.h
+C:/Users/Usuario/Desktop/Facultad/Game/Headers/Colision/Collision.h
+
+C:/Users/Usuario/Desktop/Facultad/Game/Headers/Colision/Collision.h
 SFML/Graphics.hpp
 -
 
-C:/Users/Usuario/Desktop/Game/Headers/List/LinkedList.h
+C:/Users/Usuario/Desktop/Facultad/Game/Headers/List/LinkedList.h
 Node.h
-C:/Users/Usuario/Desktop/Game/Headers/List/Node.h
+C:/Users/Usuario/Desktop/Facultad/Game/Headers/List/Node.h
 
-C:/Users/Usuario/Desktop/Game/Headers/List/Node.h
+C:/Users/Usuario/Desktop/Facultad/Game/Headers/List/Node.h
 
-C:/Users/Usuario/Desktop/Game/Headers/Spaceship.h
+C:/Users/Usuario/Desktop/Facultad/Game/Headers/Spaceship.cpp
+Spaceship.h
+C:/Users/Usuario/Desktop/Facultad/Game/Headers/Spaceship.h
+
+C:/Users/Usuario/Desktop/Facultad/Game/Headers/Spaceship.h
 SFML/Graphics.hpp
 -
 
-C:/Users/Usuario/Desktop/Game/main.cpp
+C:/Users/Usuario/Desktop/Facultad/Game/main.cpp
 iostream
 -
 string
@@ -40,11 +56,11 @@ stack
 queue
 -
 Headers/Colision/Collision.h
-C:/Users/Usuario/Desktop/Game/Headers/Colision/Collision.h
+C:/Users/Usuario/Desktop/Facultad/Game/Headers/Colision/Collision.h
 Headers/List/LinkedList.h
-C:/Users/Usuario/Desktop/Game/Headers/List/LinkedList.h
+C:/Users/Usuario/Desktop/Facultad/Game/Headers/List/LinkedList.h
 Headers/Spaceship.h
-C:/Users/Usuario/Desktop/Game/Headers/Spaceship.h
+C:/Users/Usuario/Desktop/Facultad/Game/Headers/Spaceship.h
 Headers/Asteroid.h
-C:/Users/Usuario/Desktop/Game/Headers/Asteroid.h
+C:/Users/Usuario/Desktop/Facultad/Game/Headers/Asteroid.h
 
