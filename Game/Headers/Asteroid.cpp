@@ -3,11 +3,13 @@
 #define HEIGHT 600
 
 
-Asteroid::Asteroid(int pos, Texture &tx) {
+Asteroid::Asteroid(int pos) {
+    tex_asteroid.loadFromFile("images/asteroid/asteroid.png");
     x = pos * 64;
-    sp.setTexture(tx);
+    sp.setTexture(tex_asteroid);
     animation = 0;
     y = (-64);
+
 }
 
 bool Asteroid::move() {

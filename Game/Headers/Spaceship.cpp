@@ -3,16 +3,14 @@
 #define WIDTH 575
 #define HEIGHT 600
 
-Spaceship::Spaceship(int initial_x, int initial_y, Texture &tex) {
-    x = initial_x;
-    y = initial_y;
-    sp.setTexture(tex);
+//Construye el objeto y le setea la textura
+Spaceship::Spaceship() {
+    tex_spaceship.loadFromFile("images/nave/ship_x2_64x64.png");
+    sp.setTexture(tex_spaceship);
     animation = 0;
 }
 
-void Spaceship::move(int x, int y) {
-    this->x += x;
-    this->y += y;
+void Spaceship::delimitation() {
 
     if (this->x < 0)
         this->x = 0;
@@ -29,6 +27,7 @@ void Spaceship::draw(RenderWindow &window) {
     int aux;
     sp.setPosition(this->x, this->y);
 
+    //Animacion del jugador
     animation ++;
 
     if (animation < 8)
@@ -41,18 +40,37 @@ void Spaceship::draw(RenderWindow &window) {
     if(animation > 24)
         animation = 0;
 
+    //delimitacion de la parte de la textura que se quiere mostrar
     sp.setTextureRect({aux * 64, 0, 64 , 64});
     window.draw(sp);
 
 }
 
-void Spaceship::setPosition(int x, int y) {
-    this->x = x;
-    this->y = y;
+
+void Spaceship::setPosition() {
+    x = 250;
+    y = HEIGHT/2;
 }
 
 Sprite Spaceship::getSprite() {
     return this->sp;
+}
+
+void Spaceship::move() {
+
+    if (Keyboard::isKeyPressed(Keyboard::A)) {
+        this->x -= 5;
+    }
+    if (Keyboard::isKeyPressed(Keyboard::D)) {
+        this->x += 5;
+    }
+    if (Keyboard::isKeyPressed(Keyboard::W)) {
+        this->y -= 5;
+    }
+    if (Keyboard::isKeyPressed(Keyboard::S)) {
+        this->y += 5;
+    }
+
 }
 
 
