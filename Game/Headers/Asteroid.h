@@ -1,6 +1,5 @@
 #include <SFML/Graphics.hpp>
 
-
 using namespace sf;
 
 #ifndef GAME_ASTEROID_H
@@ -26,6 +25,5 @@ public:
 
     void draw(RenderWindow &window);
 };
-
 
 #endif

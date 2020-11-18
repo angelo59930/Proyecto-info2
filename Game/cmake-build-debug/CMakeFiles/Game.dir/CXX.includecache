@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Usuario/Desktop/Facultad/Game/Headers/Asteroid.cpp
+Asteroid.h
+C:/Users/Usuario/Desktop/Facultad/Game/Headers/Asteroid.h
+
 C:/Users/Usuario/Desktop/Facultad/Game/Headers/Asteroid.h
 SFML/Graphics.hpp
 -
@@ -19,6 +23,10 @@ Node.h
 C:/Users/Usuario/Desktop/Facultad/Game/Headers/List/Node.h
 
 C:/Users/Usuario/Desktop/Facultad/Game/Headers/List/Node.h
+
+C:/Users/Usuario/Desktop/Facultad/Game/Headers/Spaceship.cpp
+Spaceship.h
+C:/Users/Usuario/Desktop/Facultad/Game/Headers/Spaceship.h
 
 C:/Users/Usuario/Desktop/Facultad/Game/Headers/Spaceship.h
 SFML/Graphics.hpp

@@ -138,7 +138,9 @@ int main() {
             if (life)
                 player.draw(window);
             if (!life) {
-                //si el jugador pierde se borra la lista, se pasa la puntuacion al stack y muestra la pantalla de meurte
+                //si el jugador pierde se borra la lista,
+                //se pasa la puntuacion al stack y muestra 
+                //la pantalla de meurte
                 asteroid_list.~LinkedList();
                 stack_score.push(score);
                 game = false;
